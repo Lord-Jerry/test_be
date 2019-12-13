@@ -19,7 +19,7 @@ module.exports = {
       type: Sequelize.STRING,
       allowNull: false,
     },
-    status: {
+    state: {
       type: Sequelize.ENUM(['todo', 'done']),
       allowNull: false,
       defaultValue: 'todo',

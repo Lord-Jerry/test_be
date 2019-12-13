@@ -4,7 +4,6 @@ const Validator = require('validatorjs');
 
 const createTask = async (req, _res, next) => {
   const rules = {
-    task: 'required',
     description: 'required',
     state: 'required',
   };

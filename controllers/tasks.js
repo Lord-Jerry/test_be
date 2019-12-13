@@ -14,7 +14,6 @@ class Task {
   static async create(req, res, next) {
     try {
       const {
-        task,
         description,
         state,
         userId,
@@ -31,7 +30,6 @@ class Task {
 
       const registeredTask = await tasks.create({
         userId,
-        task,
         description,
         state,
       });

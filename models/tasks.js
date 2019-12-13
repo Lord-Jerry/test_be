@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    status: {
+    state: {
       type: DataTypes.ENUM(['todo', 'done']),
       allowNull: false,
       defaultValue: 'todo',
