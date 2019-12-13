@@ -13,7 +13,7 @@ router
 
 router
   .route(`${url}/update-user/:userId`)
-  .post(
+  .put(
     create,
     UserController.update,
   );

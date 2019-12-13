@@ -1,5 +1,4 @@
 /* eslint-disable camelcase */
-const { decode } = require('../helpers/token');
 const { users } = require('../models');
 
 /**
@@ -7,7 +6,7 @@ const { users } = require('../models');
  */
 class User {
   /**
-   * this method registers a user's property on the platform
+   * this method creates users
    * @param { object } req - request body
    * @param { object } res - api response
    * @param { function } next - next middleware function
@@ -43,7 +42,7 @@ class User {
     try {
       const { userId } = req.params;
       const {
-        body
+        name
       } = req.body;
 
       const findUser = await users.findByPk(userId);
@@ -73,7 +72,7 @@ class User {
 
   static async delete(req, res, next) {
     try {
-      const { tenantId } = req.params;
+      const { userId } = req.params;
       const findUser = await users.findByPk(userId);
 
       if (!findUser) {
