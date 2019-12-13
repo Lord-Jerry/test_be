@@ -92,6 +92,22 @@ class User {
       return next(err);
     }
   }
+
+  static async getAll(req, res, next) {
+    try {
+      const allUsers = await users.findAll({});
+
+      return res.status(200).json({
+        message: 'availabe Users',
+        statusCode: 200,
+        data: {
+          users, allUsers,
+        },
+      });
+    } catch (err) {
+      return next(err);
+    }
+  }
 }
 
 module.exports = User;

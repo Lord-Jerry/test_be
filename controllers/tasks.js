@@ -126,7 +126,7 @@ class Task {
         message: 'availabe tasks',
         statusCode: 200,
         data: {
-          tasks, findTasks,
+          tasks: findTasks,
         },
       });
     } catch (err) {

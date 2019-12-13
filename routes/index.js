@@ -26,6 +26,12 @@ router
     UserController.delete,
   );
 
+router
+  .route(`${url}/users`)
+  .get(
+    UserController.getAll,
+  );
+
 // TASK ROUTE
 router
   .route(`${url}/create-task`)
