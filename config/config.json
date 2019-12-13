@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "salvonic9090",
+    "database": "bunny",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "postgres",
+    "password": "salvonic9090",
+    "database": "bunny",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false,
+    "env": ""
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL",
+    "dialect": "postgres"
+  }
+}
