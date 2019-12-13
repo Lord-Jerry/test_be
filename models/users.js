@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
 
   // eslint-disable-next-line no-unused-vars
   users.associate = function model(models) {
-
+    users.hasMany(model.tasks, { onDelete: 'cascade' });
   };
   return users;
 };
