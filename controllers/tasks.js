@@ -29,7 +29,7 @@ class Task {
         return next(err);
       }
 
-      const registeredTask = await users.create({
+      const registeredTask = await tasks.create({
         userId,
         task,
         description,
@@ -95,7 +95,7 @@ class Task {
       const { taskId } = req.params;
       const findTask = await tasks.findByPk(taskId);
 
-      if (!findUser) {
+      if (!findTask) {
         const err = new Error();
         err.message = `task with ID ${taskId} not found`;
         err.statusCode = 404;
